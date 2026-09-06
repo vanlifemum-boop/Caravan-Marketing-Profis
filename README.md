@@ -10,6 +10,7 @@ Eine responsive, statische Agentur-Website für Unternehmen aus der Caravan- und
 - Kontaktformular, das eine vorbereitete E-Mail öffnet
 - Vorlagen für Impressum und Datenschutz
 - Optimiertes WebP-Hero-Bild
+- Lokal ausgelieferte Schriften, keine externen Requests
 
 ## Lokal ansehen
 
@@ -46,9 +47,15 @@ Alle Werte liegen als CSS-Variablen in `:root` in `styles.css`:
 | Sekundärtext | `--muted` | `#5A7074` |
 | Akzent (sparsam) | `--sun` / `--sun-deep` | `#F2C14E` / `#C8951F` |
 
-Typografie: Serif-Stack (`--serif`) für Überschriften, Sans (`--sans`) für Fließtext.
-Beides sind Systemschrift-Stacks – kein externer Webfont, damit die Seite ohne
-Google-Fonts-Einbindung auskommt.
+Typografie: **Newsreader** (`--serif`) für Überschriften, **Archivo** (`--sans`)
+für Fließtext. Beide Schriften liegen unter `fonts/` im Repository und werden
+lokal ausgeliefert – **kein Google-Fonts-CDN**, das gilt in Deutschland als
+Datenübermittlung in die USA und wurde vielfach abgemahnt. Fehlen die Dateien,
+greifen automatisch die Systemschrift-Stacks dahinter; die Seite bleibt
+vollständig funktionsfähig und sieht nur etwas anders aus.
+
+Beide Familien stehen unter der SIL Open Font License 1.1, die Lizenztexte
+liegen als `fonts/OFL-archivo.txt` und `fonts/OFL-newsreader.txt` daneben.
 
 Layoutprinzipien: asymmetrisches Raster, Haarlinien statt Karten und Schatten,
 Zahlen als redaktionelle Auszeichnung, Akzentfarbe nur für Marker und Ziffern.
