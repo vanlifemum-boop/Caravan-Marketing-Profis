@@ -28,3 +28,26 @@ Danach `http://localhost:8000` öffnen.
 3. Optional echte Referenzen, Kundenlogos und Kontaktdaten ergänzen.
 
 Die Website benötigt derzeit kein Framework und keinen Build-Schritt.
+
+## Designsystem
+
+Farbwelt „Küste & Frische", editorial-ruhige Aufmachung mit viel Weißraum.
+Alle Werte liegen als CSS-Variablen in `:root` in `styles.css`:
+
+| Rolle | Variable | Wert |
+| --- | --- | --- |
+| Grundton | `--paper` | `#F2F5F5` |
+| Helle Fläche | `--paper-lift` | `#FAFCFC` |
+| Ruhige Bandfläche | `--shell` | `#E7EDED` |
+| Hauptfarbe | `--deep` | `#0E3B45` |
+| Dunkle Fläche | `--deep-2` | `#092A32` |
+| Text | `--ink` | `#10201F` |
+| Sekundärtext | `--muted` | `#5A7074` |
+| Akzent (sparsam) | `--sun` / `--sun-deep` | `#F2C14E` / `#C8951F` |
+
+Typografie: Serif-Stack (`--serif`) für Überschriften, Sans (`--sans`) für Fließtext.
+Beides sind Systemschrift-Stacks – kein externer Webfont, damit die Seite ohne
+Google-Fonts-Einbindung auskommt.
+
+Layoutprinzipien: asymmetrisches Raster, Haarlinien statt Karten und Schatten,
+Zahlen als redaktionelle Auszeichnung, Akzentfarbe nur für Marker und Ziffern.

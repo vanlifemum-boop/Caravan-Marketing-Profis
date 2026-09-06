@@ -7,10 +7,15 @@
       name="description"
       content="Caravan Marketing Profis entwickelt Websites, Kampagnen und Inhalte für Händler, Vermieter, Campingplätze und Marken der Caravan-Branche."
     />
-    <meta name="theme-color" content="#101719" />
+    <meta name="theme-color" content="#0e3b45" />
     <title>Caravan Marketing Profis — Marketing für die Caravan-Branche</title>
     <link rel="preload" href="assets/caravan-hero.webp" as="image" type="image/webp" />
     <link rel="stylesheet" href="styles.css" />
+    <noscript>
+      <style>
+        [data-reveal] { opacity: 1 !important; transform: none !important; }
+      </style>
+    </noscript>
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -42,15 +47,15 @@
       <section class="hero" id="top">
         <div class="container hero-grid">
           <div class="hero-copy" data-reveal>
-            <p class="eyebrow"><span></span> Marketing für Caravan, Camping &amp; Reisemobil</p>
-            <h1>Deine Branche.<br /><em>Unser Antrieb.</em></h1>
-            <p class="hero-lead">
+            <p class="kicker">Marketing für Caravan, Camping &amp; Reisemobil</p>
+            <h1>Deine Branche.<em>Unser Antrieb.</em></h1>
+            <p class="lead hero-lead">
               Wir machen Caravan-Unternehmen sichtbar – mit Websites, Kampagnen und Content,
               die aus Aufmerksamkeit qualifizierte Anfragen machen.
             </p>
             <div class="hero-actions">
               <a class="button button-primary" href="#kontakt">Kostenloses Erstgespräch</a>
-              <a class="text-link" href="#leistungen">Leistungen entdecken <span aria-hidden="true">↘</span></a>
+              <a class="text-link" href="#leistungen">Leistungen entdecken <span aria-hidden="true">↓</span></a>
             </div>
             <ul class="hero-facts" aria-label="Unsere Arbeitsweise">
               <li><strong>Branchenfokus</strong><span>Caravan &amp; Camping</span></li>
@@ -66,10 +71,7 @@
               width="1400"
               height="876"
             />
-            <div class="hero-stamp" aria-hidden="true">
-              <span>Marketing</span>
-              <strong>mit Weitblick</strong>
-            </div>
+            <p class="hero-caption">Marketing mit Weitblick — von der ersten Idee bis zur laufenden Kampagne.</p>
           </div>
         </div>
       </section>
@@ -77,18 +79,21 @@
       <section class="audience-strip" aria-label="Zielgruppen">
         <div class="container strip-inner">
           <span>Für</span>
-          <p>Händler</p><i></i><p>Vermieter</p><i></i><p>Campingplätze</p><i></i><p>Hersteller &amp; Marken</p>
+          <p>Händler</p><i aria-hidden="true"></i>
+          <p>Vermieter</p><i aria-hidden="true"></i>
+          <p>Campingplätze</p><i aria-hidden="true"></i>
+          <p>Hersteller &amp; Marken</p>
         </div>
       </section>
 
       <section class="section intro" id="agentur">
         <div class="container intro-grid">
           <div data-reveal>
-            <p class="section-kicker">Die Branche tickt anders</p>
+            <p class="kicker">Die Branche tickt anders</p>
             <h2>Marketing ohne Umwege.</h2>
           </div>
           <div class="intro-copy" data-reveal>
-            <p class="intro-lead">
+            <p class="lead">
               Zwischen Probefahrt, Saisonstart und Stellplatzsuche gelten eigene Regeln.
               Wir verbinden das Lebensgefühl der Caravan-Szene mit messbarer digitaler Kommunikation.
             </p>
@@ -103,47 +108,63 @@
         <div class="container">
           <div class="section-heading" data-reveal>
             <div>
-              <p class="section-kicker">Leistungen</p>
+              <p class="kicker">Leistungen</p>
               <h2>Alles für mehr Zugkraft.</h2>
             </div>
             <p>Strategie und Umsetzung aus einer Hand – zugeschnitten auf deine Ziele und deine Saison.</p>
           </div>
 
-          <div class="service-grid">
-            <article class="service-card service-featured" data-reveal>
-              <span class="service-number">01</span>
-              <h3>Websites &amp; Landingpages</h3>
-              <p>Schnelle, klare Auftritte, die mobil überzeugen und Interessenten gezielt zur Anfrage führen.</p>
-              <ul><li>Konzeption &amp; Design</li><li>Texte &amp; Nutzerführung</li><li>Technische Umsetzung</li></ul>
-            </article>
-            <article class="service-card" data-reveal>
-              <span class="service-number">02</span>
-              <h3>SEO &amp; lokale Sichtbarkeit</h3>
-              <p>Gefunden werden, wenn Menschen nach Fahrzeugen, Vermietung, Zubehör oder Stellplätzen suchen.</p>
-            </article>
-            <article class="service-card" data-reveal>
-              <span class="service-number">03</span>
-              <h3>Google Ads</h3>
-              <p>Kampagnen mit klarem Fokus auf qualifizierte Leads, Buchungen und saisonale Nachfrage.</p>
-            </article>
-            <article class="service-card" data-reveal>
-              <span class="service-number">04</span>
-              <h3>Social Media</h3>
-              <p>Redaktionspläne und Inhalte, die Nähe zur Community schaffen und deine Marke wiedererkennbar machen.</p>
-            </article>
-            <article class="service-card" data-reveal>
-              <span class="service-number">05</span>
-              <h3>Foto, Video &amp; Content</h3>
-              <p>Fahrzeuge, Plätze und Reisegefühl authentisch inszeniert – für Website, Anzeigen und soziale Kanäle.</p>
-            </article>
-          </div>
+          <ul class="service-list">
+            <li data-reveal>
+              <article class="service-row">
+                <span class="service-number">01</span>
+                <div>
+                  <h3>Websites &amp; Landingpages</h3>
+                  <ul class="service-tags">
+                    <li>Konzeption &amp; Design</li>
+                    <li>Texte &amp; Nutzerführung</li>
+                    <li>Technische Umsetzung</li>
+                  </ul>
+                </div>
+                <p>Schnelle, klare Auftritte, die mobil überzeugen und Interessenten gezielt zur Anfrage führen.</p>
+              </article>
+            </li>
+            <li data-reveal>
+              <article class="service-row">
+                <span class="service-number">02</span>
+                <div><h3>SEO &amp; lokale Sichtbarkeit</h3></div>
+                <p>Gefunden werden, wenn Menschen nach Fahrzeugen, Vermietung, Zubehör oder Stellplätzen suchen.</p>
+              </article>
+            </li>
+            <li data-reveal>
+              <article class="service-row">
+                <span class="service-number">03</span>
+                <div><h3>Google Ads</h3></div>
+                <p>Kampagnen mit klarem Fokus auf qualifizierte Leads, Buchungen und saisonale Nachfrage.</p>
+              </article>
+            </li>
+            <li data-reveal>
+              <article class="service-row">
+                <span class="service-number">04</span>
+                <div><h3>Social Media</h3></div>
+                <p>Redaktionspläne und Inhalte, die Nähe zur Community schaffen und deine Marke wiedererkennbar machen.</p>
+              </article>
+            </li>
+            <li data-reveal>
+              <article class="service-row">
+                <span class="service-number">05</span>
+                <div><h3>Foto, Video &amp; Content</h3></div>
+                <p>Fahrzeuge, Plätze und Reisegefühl authentisch inszeniert – für Website, Anzeigen und soziale Kanäle.</p>
+              </article>
+            </li>
+          </ul>
         </div>
       </section>
 
-      <section class="section sectors" id="branchen">
+      <section class="section sectors on-deep" id="branchen">
         <div class="container sectors-grid">
           <div class="sectors-copy" data-reveal>
-            <p class="section-kicker light">Für die ganze Caravan-Welt</p>
+            <p class="kicker on-dark">Für die ganze Caravan-Welt</p>
             <h2>Von der Probefahrt bis zur Platzbuchung.</h2>
             <p>
               Jede Zielgruppe braucht einen eigenen Einstieg. Wir entwickeln die passende Botschaft,
@@ -151,12 +172,24 @@
             </p>
             <a class="button button-light" href="#kontakt">Projekt besprechen</a>
           </div>
-          <div class="sector-list" data-reveal>
-            <article><span>01</span><div><h3>Händler &amp; Werkstätten</h3><p>Mehr Sichtbarkeit für Fahrzeuge, Beratung und Service.</p></div></article>
-            <article><span>02</span><div><h3>Vermieter</h3><p>Mehr passende Buchungsanfragen – besonders vor der Saison.</p></div></article>
-            <article><span>03</span><div><h3>Campingplätze</h3><p>Erlebnisse verständlich zeigen und Direktbuchungen stärken.</p></div></article>
-            <article><span>04</span><div><h3>Hersteller &amp; Zubehörmarken</h3><p>Produkte positionieren und eine loyale Community aufbauen.</p></div></article>
-          </div>
+          <ul class="sector-list" data-reveal>
+            <li>
+              <span>01</span>
+              <div><h3>Händler &amp; Werkstätten</h3><p>Mehr Sichtbarkeit für Fahrzeuge, Beratung und Service.</p></div>
+            </li>
+            <li>
+              <span>02</span>
+              <div><h3>Vermieter</h3><p>Mehr passende Buchungsanfragen – besonders vor der Saison.</p></div>
+            </li>
+            <li>
+              <span>03</span>
+              <div><h3>Campingplätze</h3><p>Erlebnisse verständlich zeigen und Direktbuchungen stärken.</p></div>
+            </li>
+            <li>
+              <span>04</span>
+              <div><h3>Hersteller &amp; Zubehörmarken</h3><p>Produkte positionieren und eine loyale Community aufbauen.</p></div>
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -164,7 +197,7 @@
         <div class="container">
           <div class="section-heading compact" data-reveal>
             <div>
-              <p class="section-kicker">Zusammenarbeit</p>
+              <p class="kicker">Zusammenarbeit</p>
               <h2>Vier Etappen. Ein klares Ziel.</h2>
             </div>
           </div>
@@ -180,7 +213,7 @@
       <section class="section contact" id="kontakt">
         <div class="container contact-panel" data-reveal>
           <div class="contact-copy">
-            <p class="section-kicker light">Bereit für den nächsten Gang?</p>
+            <p class="kicker">Bereit für den nächsten Gang?</p>
             <h2>Lass uns über dein Projekt sprechen.</h2>
             <p>Erzähl uns kurz, wo du stehst. Wir melden uns mit einem klaren ersten Blick auf die nächsten sinnvollen Schritte.</p>
             <p class="contact-note">Unverbindlich · persönlich · auf Augenhöhe</p>
@@ -200,15 +233,17 @@
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-grid">
-        <a class="brand footer-brand" href="#top" aria-label="Zurück nach oben">
-          <span class="brand-mark" aria-hidden="true">CMP</span>
-          <span class="brand-name">Caravan Marketing<br /><strong>Profis</strong></span>
-        </a>
-        <p>Marketing für Unternehmen, die Freiheit verkaufen.</p>
-        <div class="footer-links">
-          <a href="impressum.html">Impressum</a>
-          <a href="datenschutz.html">Datenschutz</a>
+      <div class="container">
+        <div class="footer-grid">
+          <a class="brand footer-brand" href="#top" aria-label="Zurück nach oben">
+            <span class="brand-mark" aria-hidden="true">CMP</span>
+            <span class="brand-name">Caravan Marketing<br /><strong>Profis</strong></span>
+          </a>
+          <p>Marketing für Unternehmen, die Freiheit verkaufen.</p>
+          <div class="footer-links">
+            <a href="impressum.html">Impressum</a>
+            <a href="datenschutz.html">Datenschutz</a>
+          </div>
         </div>
         <p class="copyright">© <span data-year></span> Caravan Marketing Profis</p>
       </div>
