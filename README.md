@@ -23,7 +23,8 @@ Danach `http://localhost:8000` öffnen.
 
 ## Vor Veröffentlichung anpassen
 
-1. In `script.js` die vorläufige Empfängeradresse `kontakt@caravan-marketing-profis.de` durch die echte Kontaktadresse ersetzen.
+1. In `script.js` ganz oben die Konstante `EMPFAENGER` auf die echte Kontaktadresse setzen.
+   Aktuell steht dort `check@caravan-marketing-profis.de`. Ohne diesen Schritt geht keine Anfrage ein.
 2. Die markierten Angaben in `impressum.html` und `datenschutz.html` vervollständigen und rechtlich prüfen lassen.
 3. Optional echte Referenzen, Kundenlogos und Kontaktdaten ergänzen.
 

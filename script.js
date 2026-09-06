@@ -1,3 +1,9 @@
+// ---------------------------------------------------------------
+// Empfaengeradresse fuer das Kontaktformular.
+// Hier die echte Adresse eintragen - ohne sie geht keine Anfrage ein.
+// ---------------------------------------------------------------
+const EMPFAENGER = "check@caravan-marketing-profis.de";
+
 const header = document.querySelector("[data-header]");
 const menuToggle = document.querySelector("[data-menu-toggle]");
 const navigation = document.querySelector("[data-nav]");
@@ -59,5 +65,5 @@ contactForm?.addEventListener("submit", (event) => {
     `Name: ${name}\nUnternehmen: ${company || "–"}\nE-Mail: ${email}\n\nProjekt:\n${message}`
   );
 
-  window.location.href = `mailto:kontakt@caravan-marketing-profis.de?subject=${subject}&body=${body}`;
+  window.location.href = `mailto:${EMPFAENGER}?subject=${subject}&body=${body}`;
 });
