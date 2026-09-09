@@ -1,217 +1,453 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Caravan Marketing Profis entwickelt Websites, Kampagnen und Inhalte für Händler, Vermieter, Campingplätze und Marken der Caravan-Branche."
-    />
-    <meta name="theme-color" content="#101719" />
-    <title>Caravan Marketing Profis — Marketing für die Caravan-Branche</title>
-    <link rel="preload" href="assets/caravan-hero.webp" as="image" type="image/webp" />
-    <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Zum Inhalt springen</a>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Die Caravan Marketing Profis — Marketing für die Caravan- und Campingbranche</title>
+<meta name="description" content="Marketing ausschließlich für Campingplätze, Vermieter, Caravan-Händler, Hersteller, Werkstätten und Zubehörmarken. Sichtbarkeit, Anfragen, Buchungen.">
+<meta name="theme-color" content="#0F2A2E">
+<link rel="preload" href="fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%230F2A2E'/><path d='M6 12h14l4 4v6H6z' fill='%23FFC300'/><circle cx='11' cy='23' r='3' fill='%230F2A2E'/><circle cx='21' cy='23' r='3' fill='%230F2A2E'/></svg>">
+<link rel="stylesheet" href="styles.css">
+<script src="script.js" defer></script>
+</head>
+<body>
 
-    <header class="site-header" data-header>
-      <div class="container header-inner">
-        <a class="brand" href="#top" aria-label="Caravan Marketing Profis – Startseite">
-          <span class="brand-mark" aria-hidden="true">CMP</span>
-          <span class="brand-name">Caravan Marketing<br /><strong>Profis</strong></span>
-        </a>
+<div class="wrap">
 
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" data-menu-toggle>
-          <span class="sr-only">Menü öffnen</span>
-          <span></span><span></span>
-        </button>
+  <header class="kopf">
+    <div class="marke">Die Caravan Marketing <span>Profis</span></div>
+    <div class="ort">Marketing für die Caravan- und Campingbranche</div>
+  </header>
 
-        <nav class="main-nav" id="main-nav" aria-label="Hauptnavigation" data-nav>
-          <a href="#leistungen">Leistungen</a>
-          <a href="#branchen">Für wen</a>
-          <a href="#ablauf">Ablauf</a>
-          <a href="#agentur">Agentur</a>
-          <a class="nav-cta" href="#kontakt">Erstgespräch</a>
-        </nav>
+  <main id="inhalt">
+
+  <div class="scheibe-block">
+    <div class="scheibe" id="scheibe">
+      <div class="scheibe-inhalt">
+        <h1>Morgens ist alles beschlagen. Freiwischen ist unser Job.</h1>
+        <p class="unter">
+          Wir bringen Produkte und Marken aus der Caravanwelt dorthin, wo gesucht wird —
+          und machen aus Sichtbarkeit Verkäufe. Von der Produkteinführung über den
+          Messestand bis in den Shop. <b>Wir arbeiten ausschließlich für diese Branche</b>
+          und leben selbst im Bus.
+        </p>
+        <div class="knoepfe">
+          <a href="#check" class="btn btn-signal">Kostenlosen Caravan-Marketing-Check anfragen</a>
+          <a href="#leistungen" class="btn btn-linie">Leistungen ansehen</a>
+        </div>
+        <div class="vertrauenszeile">
+          <span>Nur Caravaning und Camping</span>
+          <span>Wir testen selbst, was wir bewerben</span>
+          <span>Kennzahlen statt Reichweite</span>
+        </div>
       </div>
-    </header>
 
-    <main id="main">
-      <section class="hero" id="top">
-        <div class="container hero-grid">
-          <div class="hero-copy" data-reveal>
-            <p class="eyebrow"><span></span> Marketing für Caravan, Camping &amp; Reisemobil</p>
-            <h1>Deine Branche.<br /><em>Unser Antrieb.</em></h1>
-            <p class="hero-lead">
-              Wir machen Caravan-Unternehmen sichtbar – mit Websites, Kampagnen und Content,
-              die aus Aufmerksamkeit qualifizierte Anfragen machen.
-            </p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#kontakt">Kostenloses Erstgespräch</a>
-              <a class="text-link" href="#leistungen">Leistungen entdecken <span aria-hidden="true">↘</span></a>
-            </div>
-            <ul class="hero-facts" aria-label="Unsere Arbeitsweise">
-              <li><strong>Branchenfokus</strong><span>Caravan &amp; Camping</span></li>
-              <li><strong>Klare Ziele</strong><span>Sichtbarkeit &amp; Anfragen</span></li>
-              <li><strong>Direkter Kurs</strong><span>Strategie bis Umsetzung</span></li>
-            </ul>
-          </div>
+      <canvas id="beschlag" aria-hidden="true"></canvas>
+      <button class="freiwischen" id="freiwischen">Ganz freiwischen</button>
+      <div class="wisch-hinweis" id="hinweis">Mit dem Finger über die Scheibe wischen</div>
 
-          <div class="hero-visual" data-reveal>
-            <img
-              src="assets/caravan-hero.webp"
-              alt="Modernes Reisemobil auf einer Bergstraße im Morgenlicht"
-              width="1400"
-              height="876"
-            />
-            <div class="hero-stamp" aria-hidden="true">
-              <span>Marketing</span>
-              <strong>mit Weitblick</strong>
-            </div>
-          </div>
-        </div>
-      </section>
+      <svg id="camper" viewBox="0 0 78 44" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14 14 L20 6 L52 6 L58 14 Z" fill="#FFC300" opacity=".85"/>
+        <path d="M8 14 H62 L72 24 V33 H8 Z" fill="#FFC300"/>
+        <path d="M62 14 L72 24 H62 Z" fill="#E0A800"/>
+        <rect x="14" y="18" width="16" height="9" rx="1" fill="#08191C" opacity=".8"/>
+        <rect x="34" y="18" width="12" height="9" rx="1" fill="#08191C" opacity=".8"/>
+        <rect x="52" y="19" width="9" height="8" rx="1" fill="#08191C" opacity=".8"/>
+        <circle cx="21" cy="34" r="6" fill="#08191C"/>
+        <circle cx="21" cy="34" r="2.4" fill="#C9D2D0"/>
+        <circle cx="60" cy="34" r="6" fill="#08191C"/>
+        <circle cx="60" cy="34" r="2.4" fill="#C9D2D0"/>
+      </svg>
+    </div>
+  </div>
 
-      <section class="audience-strip" aria-label="Zielgruppen">
-        <div class="container strip-inner">
-          <span>Für</span>
-          <p>Händler</p><i></i><p>Vermieter</p><i></i><p>Campingplätze</p><i></i><p>Hersteller &amp; Marken</p>
-        </div>
-      </section>
+  <section class="problem">
+    <div class="abschnitt-kopf">
+      <h2>Gutes Produkt, zu wenig Nachfrage?</h2>
+      <p>In dieser Branche entscheidet selten das bessere Produkt, sondern das bekanntere.
+         Drei Muster sehen wir bei Marken und Herstellern immer wieder.</p>
+    </div>
 
-      <section class="section intro" id="agentur">
-        <div class="container intro-grid">
-          <div data-reveal>
-            <p class="section-kicker">Die Branche tickt anders</p>
-            <h2>Marketing ohne Umwege.</h2>
-          </div>
-          <div class="intro-copy" data-reveal>
-            <p class="intro-lead">
-              Zwischen Probefahrt, Saisonstart und Stellplatzsuche gelten eigene Regeln.
-              Wir verbinden das Lebensgefühl der Caravan-Szene mit messbarer digitaler Kommunikation.
-            </p>
-            <p>
-              So entstehen Auftritte, die deine Kundschaft versteht, Vertrauen aufbauen und den nächsten Schritt leicht machen.
-            </p>
-          </div>
-        </div>
-      </section>
+    <div class="zeile">
+      <h3>Niemand kennt es</h3>
+      <p>Ihr Produkt ist durchdacht, hält länger und kostet zu Recht mehr. Gefunden wird
+         trotzdem das Konkurrenzteil, weil es in den Foren, auf YouTube und in der Google-Suche
+         auftaucht und Ihres nicht.</p>
+    </div>
+    <div class="zeile">
+      <h3>Die Neuheit lebt nur auf der Messe</h3>
+      <p>Fünf Tage Aufmerksamkeit, gute Gespräche, viele Visitenkarten. Danach passiert nichts:
+         Die Bilder liegen auf einer Festplatte, die Kontakte werden nicht nachgefasst, und im
+         Januar fängt alles wieder bei null an.</p>
+    </div>
+    <div class="zeile">
+      <h3>Marketing kostet, ohne nachvollziehbar zu sein</h3>
+      <p>Reichweite ist da. Wie viele Bestellungen, Händleranfragen oder Musterbestellungen
+         daraus entstanden sind und was ein Verkauf gekostet hat, weiß niemand.</p>
+    </div>
+  </section>
 
-      <section class="section services" id="leistungen">
-        <div class="container">
-          <div class="section-heading" data-reveal>
-            <div>
-              <p class="section-kicker">Leistungen</p>
-              <h2>Alles für mehr Zugkraft.</h2>
-            </div>
-            <p>Strategie und Umsetzung aus einer Hand – zugeschnitten auf deine Ziele und deine Saison.</p>
-          </div>
+  <section class="leistungen" id="leistungen">
+    <div class="abschnitt-kopf">
+      <h2>Was wir machen</h2>
+      <p>Einzeln oder als laufende Betreuung. Was zu Ihnen passt, entscheidet der Check —
+         nicht eine Paketliste.</p>
+    </div>
 
-          <div class="service-grid">
-            <article class="service-card service-featured" data-reveal>
-              <span class="service-number">01</span>
-              <h3>Websites &amp; Landingpages</h3>
-              <p>Schnelle, klare Auftritte, die mobil überzeugen und Interessenten gezielt zur Anfrage führen.</p>
-              <ul><li>Konzeption &amp; Design</li><li>Texte &amp; Nutzerführung</li><li>Technische Umsetzung</li></ul>
-            </article>
-            <article class="service-card" data-reveal>
-              <span class="service-number">02</span>
-              <h3>SEO &amp; lokale Sichtbarkeit</h3>
-              <p>Gefunden werden, wenn Menschen nach Fahrzeugen, Vermietung, Zubehör oder Stellplätzen suchen.</p>
-            </article>
-            <article class="service-card" data-reveal>
-              <span class="service-number">03</span>
-              <h3>Google Ads</h3>
-              <p>Kampagnen mit klarem Fokus auf qualifizierte Leads, Buchungen und saisonale Nachfrage.</p>
-            </article>
-            <article class="service-card" data-reveal>
-              <span class="service-number">04</span>
-              <h3>Social Media</h3>
-              <p>Redaktionspläne und Inhalte, die Nähe zur Community schaffen und deine Marke wiedererkennbar machen.</p>
-            </article>
-            <article class="service-card" data-reveal>
-              <span class="service-number">05</span>
-              <h3>Foto, Video &amp; Content</h3>
-              <p>Fahrzeuge, Plätze und Reisegefühl authentisch inszeniert – für Website, Anzeigen und soziale Kanäle.</p>
-            </article>
-          </div>
-        </div>
-      </section>
+    <div class="zeile">
+      <h3>Strategie &amp; Marketing-Check</h3>
+      <p>Produkt, Positionierung, Sichtbarkeit und Wettbewerb prüfen. Daraus ein 90-Tage-Plan
+         mit priorisierten Maßnahmen.
+         <span class="ergebnis">Ergebnis: klare Ausgangslage und drei nächste Schritte</span></p>
+    </div>
+    <div class="zeile">
+      <h3>Produktfotografie, Content &amp; Video</h3>
+      <p>Produkte im Einsatz statt vor weißem Hintergrund: eingebaut, unterwegs, bei Regen,
+         nach zwei Jahren Gebrauch. Aus einem Drehtag entstehen Inhalte für Monate — für
+         Shop, Händler, Katalog und Social Media.
+         <span class="ergebnis">Ergebnis: Bildmaterial, das erklärt statt nur zu zeigen</span></p>
+    </div>
+    <div class="zeile">
+      <h3>Produkteinführung &amp; Messe</h3>
+      <p>Neuheit vorbereiten, auf der Messe begleiten, danach verwerten. Content direkt vom
+         Stand, Nachfassen bei Händlern und Kontakten, statt fünf Tage Aufmerksamkeit und
+         danach Stille.
+         <span class="ergebnis">Ergebnis: eine Neuheit, die über die Messe hinaus trägt</span></p>
+    </div>
+    <div class="zeile">
+      <h3>Website, Produktseiten &amp; Shop</h3>
+      <p>Produktseiten, die die Kaufentscheidung wirklich beantworten: Maße, Kompatibilität,
+         Einbau, Verbrauch. Dazu vereinfachte Bestell- und Anfragewege und sauberes Tracking.
+         <span class="ergebnis">Ergebnis: weniger Abbrüche, mehr abgeschlossene Käufe</span></p>
+    </div>
+    <div class="zeile">
+      <h3>SEO &amp; Auffindbarkeit</h3>
+      <p>Gefunden werden, wenn jemand nach dem Problem sucht, das Ihr Produkt löst — nicht
+         nur nach dem Markennamen. Produkt- und Ratgeberseiten, technische Grundlagen,
+         für Betriebe zusätzlich das Google-Unternehmensprofil.
+         <span class="ergebnis">Ergebnis: Nachfrage, die nicht jeden Monat neu bezahlt wird</span></p>
+    </div>
+    <div class="zeile">
+      <h3>Google &amp; Social Ads</h3>
+      <p>Google-Suche, Shopping, Meta, YouTube und Pinterest — getrennt nach Produkt, Region
+         und Saison. Pinterest wird in dieser Branche fast überall übersehen, obwohl dort
+         Monate vor der Reise geplant und gesammelt wird. Das Werbebudget läuft über Ihre
+         eigenen Konten, getrennt vom Honorar.
+         <span class="ergebnis">Ergebnis: bekannte Kosten pro Verkauf</span></p>
+    </div>
+  </section>
 
-      <section class="section sectors" id="branchen">
-        <div class="container sectors-grid">
-          <div class="sectors-copy" data-reveal>
-            <p class="section-kicker light">Für die ganze Caravan-Welt</p>
-            <h2>Von der Probefahrt bis zur Platzbuchung.</h2>
-            <p>
-              Jede Zielgruppe braucht einen eigenen Einstieg. Wir entwickeln die passende Botschaft,
-              den richtigen Kanal und eine klare digitale Route zum Abschluss.
-            </p>
-            <a class="button button-light" href="#kontakt">Projekt besprechen</a>
-          </div>
-          <div class="sector-list" data-reveal>
-            <article><span>01</span><div><h3>Händler &amp; Werkstätten</h3><p>Mehr Sichtbarkeit für Fahrzeuge, Beratung und Service.</p></div></article>
-            <article><span>02</span><div><h3>Vermieter</h3><p>Mehr passende Buchungsanfragen – besonders vor der Saison.</p></div></article>
-            <article><span>03</span><div><h3>Campingplätze</h3><p>Erlebnisse verständlich zeigen und Direktbuchungen stärken.</p></div></article>
-            <article><span>04</span><div><h3>Hersteller &amp; Zubehörmarken</h3><p>Produkte positionieren und eine loyale Community aufbauen.</p></div></article>
-          </div>
-        </div>
-      </section>
+  <section class="fahrplan">
+    <div class="abschnitt-kopf">
+      <h2>Der Caravan-Wachstumsfahrplan</h2>
+      <p>Sechs Schritte, immer in derselben Reihenfolge. Sie sehen an jedem Punkt, woran
+         gerade gearbeitet wird und was dabei herauskommt.</p>
+    </div>
 
-      <section class="section process" id="ablauf">
-        <div class="container">
-          <div class="section-heading compact" data-reveal>
-            <div>
-              <p class="section-kicker">Zusammenarbeit</p>
-              <h2>Vier Etappen. Ein klares Ziel.</h2>
-            </div>
-          </div>
-          <ol class="process-list">
-            <li data-reveal><span>01</span><h3>Kennenlernen</h3><p>Wir klären Ziel, Zielgruppe und aktuelle Hürden.</p></li>
-            <li data-reveal><span>02</span><h3>Kurs setzen</h3><p>Du erhältst eine verständliche Strategie mit Prioritäten.</p></li>
-            <li data-reveal><span>03</span><h3>Umsetzen</h3><p>Wir gestalten, texten und bringen die Maßnahmen live.</p></li>
-            <li data-reveal><span>04</span><h3>Optimieren</h3><p>Wir lernen aus den Ergebnissen und schärfen laufend nach.</p></li>
-          </ol>
-        </div>
-      </section>
+    <div class="stufe"><span class="zahl">1</span><h3>Standort bestimmen</h3>
+      <p>Website, Sichtbarkeit, Angebot, Wettbewerb und bisherige Zahlen prüfen.</p></div>
+    <div class="stufe"><span class="zahl">2</span><h3>Route festlegen</h3>
+      <p>Zielgruppen, Regionen, Saisonziele und die Kennzahlen, an denen wir uns messen lassen.</p></div>
+    <div class="stufe"><span class="zahl">3</span><h3>Digitale Basis verbessern</h3>
+      <p>Website, mobile Nutzung, Tracking, lokale Profile und Technik in Ordnung bringen.</p></div>
+    <div class="stufe"><span class="zahl">4</span><h3>Nachfrage aufbauen</h3>
+      <p>Passende Seiten, Inhalte, Suchmaschinenarbeit und Kampagnen — abgestimmt auf die Saison.</p></div>
+    <div class="stufe"><span class="zahl">5</span><h3>Anfragen in Geschäft verwandeln</h3>
+      <p>Kontakt- und Buchungswege vereinfachen, Nachfassen organisieren, Abbrüche reduzieren.</p></div>
+    <div class="stufe"><span class="zahl">6</span><h3>Messen und ausbauen</h3>
+      <p>Monatlicher Bericht in Klartext. Was rechnet sich, wird größer. Was nicht, wird gestoppt.</p></div>
+  </section>
 
-      <section class="section contact" id="kontakt">
-        <div class="container contact-panel" data-reveal>
-          <div class="contact-copy">
-            <p class="section-kicker light">Bereit für den nächsten Gang?</p>
-            <h2>Lass uns über dein Projekt sprechen.</h2>
-            <p>Erzähl uns kurz, wo du stehst. Wir melden uns mit einem klaren ersten Blick auf die nächsten sinnvollen Schritte.</p>
-            <p class="contact-note">Unverbindlich · persönlich · auf Augenhöhe</p>
-          </div>
-          <form class="contact-form" data-contact-form>
-            <div class="field-row">
-              <label>Name<input name="name" autocomplete="name" required /></label>
-              <label>Unternehmen<input name="company" autocomplete="organization" /></label>
-            </div>
-            <label>E-Mail<input type="email" name="email" autocomplete="email" required /></label>
-            <label>Worum geht es?<textarea name="message" rows="4" required></textarea></label>
-            <button class="button button-primary" type="submit">Anfrage per E-Mail senden</button>
-            <p class="form-note">Beim Klick öffnet sich dein E-Mail-Programm mit der vorbereiteten Anfrage.</p>
-          </form>
-        </div>
-      </section>
-    </main>
+  <section class="versprechen">
+    <div class="abschnitt-kopf">
+      <h2>Was wir zusagen — und was nicht</h2>
+      <p>In dieser Branche wird viel garantiert. Wir garantieren keine Platzierungen und keine
+         Umsätze, weil das seriös niemand kann. Stattdessen gilt ein fester Arbeitsstandard.</p>
+    </div>
+    <div class="standard">
+      <h3>Das können Sie von uns erwarten</h3>
+      <ul>
+        <li>Antwort auf Ihre Anfrage innerhalb von zwei Werktagen.</li>
+        <li>Vor dem Start ein schriftlicher 90-Tage-Plan mit Maßnahmen, Terminen und Zuständigkeiten.</li>
+        <li>Ein Monatsbericht in verständlicher Sprache — Anfragen, Buchungen, Kosten pro Ergebnis, nicht nur Rankings.</li>
+        <li>Werbebudget und Honorar getrennt ausgewiesen. Ihr Budget läuft über Ihre Konten.</li>
+        <li>Alle Konten, Texte, Bilder und Daten gehören Ihnen und bleiben bei Ihnen, auch nach dem Ende der Zusammenarbeit.</li>
+        <li>Was in einem Monat nicht geliefert wurde, steht im Bericht — mit Grund.</li>
+      </ul>
+      <p class="nicht">
+        Keine Erfolgsgarantie, keine Zusage auf Platz 1, keine erfundenen Referenzzahlen.
+        Wie schnell etwas wirkt, hängt von Kanal, Wettbewerb und Saison ab: Anzeigen liefern
+        meist nach Wochen erste Daten, organische Sichtbarkeit braucht in der Regel Monate.
+      </p>
+    </div>
+  </section>
 
-    <footer class="site-footer">
-      <div class="container footer-grid">
-        <a class="brand footer-brand" href="#top" aria-label="Zurück nach oben">
-          <span class="brand-mark" aria-hidden="true">CMP</span>
-          <span class="brand-name">Caravan Marketing<br /><strong>Profis</strong></span>
-        </a>
-        <p>Marketing für Unternehmen, die Freiheit verkaufen.</p>
-        <div class="footer-links">
-          <a href="impressum.html">Impressum</a>
-          <a href="datenschutz.html">Datenschutz</a>
-        </div>
-        <p class="copyright">© <span data-year></span> Caravan Marketing Profis</p>
+  <section class="projekte">
+    <div class="abschnitt-kopf">
+      <h2>Kundenprojekte</h2>
+      <p>Wir sind neu und veröffentlichen keine Zahlen, die wir nicht belegen können.
+         Sobald die ersten Projekte abgeschlossen und freigegeben sind, stehen sie hier —
+         genau in dieser Form.</p>
+    </div>
+    <div class="projekt">
+      <h3>So wird jedes Projekt hier dokumentiert</h3>
+      <dl>
+        <dt>Kunde</dt><dd>Name oder anonymisiertes Segment, mit schriftlicher Freigabe</dd>
+        <dt>Ausgangslage</dt><dd>Was vorher nicht funktioniert hat</dd>
+        <dt>Ziel</dt><dd>Die eine Geschäftskennzahl, die sich verbessern sollte</dd>
+        <dt>Maßnahmen</dt><dd>Was konkret gemacht wurde</dd>
+        <dt>Zeitraum</dt><dd>Startdatum bis Enddatum</dd>
+        <dt>Ergebnis</dt><dd>Ausgangswert und Endwert, nicht nur die Prozentzahl</dd>
+        <dt>Datenquelle</dt><dd>Buchungssystem, Search Console, Google Ads oder CRM</dd>
+        <dt>Einordnung</dt><dd>Saisonale Effekte und andere Einflüsse, die mitgewirkt haben</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section class="messen" id="messen">
+    <div class="abschnitt-kopf">
+      <h2>Messekalender</h2>
+      <p>Alle Caravan- und Campingmessen in Deutschland. Für Produktmarken sind das die
+         wichtigsten Termine im Jahr — auf vielen davon sind wir mit Kamera unterwegs und
+         produzieren für Aussteller direkt vom Stand.</p>
+    </div>
+    <div id="messeliste"></div>
+    <noscript>
+      <p class="m-fuss">Der Messekalender wird per JavaScript aufgebaut. Bitte JavaScript
+         aktivieren oder uns direkt nach den Terminen fragen.</p>
+    </noscript>
+    <p class="m-fuss">
+      Angaben ohne Gewähr, Termine ändern sich. Stand: September 2026.
+      Fehlt Ihre Messe? Schreiben Sie uns, wir nehmen sie auf.
+    </p>
+  </section>
+
+  <section class="check" id="check">
+    <h2>Kostenloser Caravan-Marketing-Check</h2>
+    <p class="einleitung">
+      Wir sehen uns Ihre Ausgangslage an und sagen Ihnen, welche drei Maßnahmen
+      voraussichtlich den größten Hebel haben. Beantworten Sie die Fragen unten — daraus
+      wird eine fertige E-Mail, die sich in Ihrem Mailprogramm öffnet. Sie schicken sie ab,
+      wir melden uns innerhalb von zwei Werktagen.
+    </p>
+
+    <div class="schritt">
+      <div class="schritt-kopf"><span class="nr">1</span><h3>Was für ein Betrieb sind Sie?</h3></div>
+      <div class="optionen">
+        <label class="opt"><input type="radio" name="betrieb" value="Zubehör, Ausbauteile oder eigene Produktmarke">
+          <span class="opt-text">Zubehör, Ausbauteile oder eigene Produktmarke</span></label>
+        <label class="opt"><input type="radio" name="betrieb" value="Hersteller oder Ausbauer">
+          <span class="opt-text">Hersteller oder Ausbauer</span></label>
+        <label class="opt"><input type="radio" name="betrieb" value="Onlineshop oder Handel">
+          <span class="opt-text">Onlineshop oder Handel</span></label>
+        <label class="opt"><input type="radio" name="betrieb" value="Caravan- oder Reisemobilhandel">
+          <span class="opt-text">Caravan- oder Reisemobilhandel</span></label>
+        <label class="opt"><input type="radio" name="betrieb" value="Vermietung von Wohnmobilen oder Caravans">
+          <span class="opt-text">Vermietung von Wohnmobilen oder Caravans</span></label>
+        <label class="opt"><input type="radio" name="betrieb" value="Werkstatt oder Servicebetrieb">
+          <span class="opt-text">Werkstatt oder Servicebetrieb</span></label>
+        <label class="opt"><input type="radio" name="betrieb" value="Campingplatz oder Stellplatz">
+          <span class="opt-text">Campingplatz oder Stellplatz</span></label>
+        <label class="opt"><input type="radio" name="betrieb" value="Etwas anderes aus der Branche">
+          <span class="opt-text">Etwas anderes aus der Branche</span></label>
       </div>
-    </footer>
-  </body>
+    </div>
+
+    <div class="schritt">
+      <div class="schritt-kopf"><span class="nr">2</span><h3>Was soll besser werden?</h3></div>
+      <p class="hinweis">Mehreres möglich. Wenn Sie unsicher sind, kreuzen Sie an, was Sie am meisten stört.</p>
+      <div class="optionen">
+        <label class="opt"><input type="checkbox" name="leistung" value="Produkt bekannter machen">
+          <span class="opt-text">Produkt bekannter machen
+            <small>Sichtbarkeit für ein Produkt oder eine Marke aufbauen</small></span></label>
+        <label class="opt"><input type="checkbox" name="leistung" value="Produktfotografie, Content &amp; Video">
+          <span class="opt-text">Produktfotografie, Content &amp; Video
+            <small>Produkte im Einsatz, Drehtag, Material für Shop und Händler</small></span></label>
+        <label class="opt"><input type="checkbox" name="leistung" value="Produkteinführung oder Messeauftritt">
+          <span class="opt-text">Produkteinführung oder Messeauftritt
+            <small>Neuheit vorbereiten, begleiten und danach verwerten</small></span></label>
+        <label class="opt"><input type="checkbox" name="leistung" value="Website, Produktseiten oder Shop">
+          <span class="opt-text">Website, Produktseiten oder Shop
+            <small>Neu bauen oder Bestehendes überarbeiten</small></span></label>
+        <label class="opt"><input type="checkbox" name="leistung" value="Gefunden werden (SEO)">
+          <span class="opt-text">Gefunden werden
+            <small>Suchbegriffe, Produkt- und Ratgeberseiten, Google-Profil</small></span></label>
+        <label class="opt"><input type="checkbox" name="leistung" value="Google &amp; Social Ads">
+          <span class="opt-text">Google &amp; Social Ads
+            <small>Kampagnen mit messbaren Kosten pro Verkauf</small></span></label>
+        <label class="opt"><input type="checkbox" name="leistung" value="Mehr aus vorhandenen Anfragen machen">
+          <span class="opt-text">Mehr aus vorhandenen Anfragen machen
+            <small>Bestellwege, Nachfassen, Händlerkontakte</small></span></label>
+        <label class="opt"><input type="checkbox" name="leistung" value="Weiß noch nicht, bitte beraten">
+          <span class="opt-text">Weiß noch nicht, bitte beraten
+            <small>Wir sehen uns den Betrieb an und schlagen etwas vor</small></span></label>
+      </div>
+    </div>
+
+    <div class="schritt">
+      <div class="schritt-kopf"><span class="nr">3</span><h3>Wie ist der Stand heute?</h3></div>
+      <div class="optionen">
+        <label class="opt"><input type="radio" name="stand" value="Keine Website vorhanden">
+          <span class="opt-text">Keine Website vorhanden</span></label>
+        <label class="opt"><input type="radio" name="stand" value="Website vorhanden, aber veraltet">
+          <span class="opt-text">Website vorhanden, aber veraltet</span></label>
+        <label class="opt"><input type="radio" name="stand" value="Website läuft, bringt aber keine Anfragen">
+          <span class="opt-text">Website läuft, bringt aber keine Anfragen</span></label>
+        <label class="opt"><input type="radio" name="stand" value="Alles vorhanden, nur der Content fehlt">
+          <span class="opt-text">Alles vorhanden, nur der Content fehlt</span></label>
+        <label class="opt"><input type="radio" name="stand" value="Produkt ist fertig, aber noch nicht eingeführt">
+          <span class="opt-text">Produkt ist fertig, aber noch nicht eingeführt</span></label>
+        <label class="opt"><input type="radio" name="stand" value="Läuft mit Agentur, aber ohne nachvollziehbare Zahlen">
+          <span class="opt-text">Läuft mit Agentur, aber ohne nachvollziehbare Zahlen</span></label>
+      </div>
+    </div>
+
+    <div class="schritt">
+      <div class="schritt-kopf"><span class="nr">4</span><h3>Bis wann soll es laufen?</h3></div>
+      <div class="optionen">
+        <label class="opt"><input type="radio" name="zeit" value="Vor der nächsten Saison">
+          <span class="opt-text">Vor der nächsten Saison</span></label>
+        <label class="opt"><input type="radio" name="zeit" value="Vor unserer nächsten Messe">
+          <span class="opt-text">Vor unserer nächsten Messe</span></label>
+        <label class="opt"><input type="radio" name="zeit" value="In den nächsten drei Monaten">
+          <span class="opt-text">In den nächsten drei Monaten</span></label>
+        <label class="opt"><input type="radio" name="zeit" value="Kein fester Termin">
+          <span class="opt-text">Kein fester Termin</span></label>
+      </div>
+    </div>
+
+    <div class="schritt">
+      <div class="schritt-kopf"><span class="nr">5</span><h3>Wohin dürfen wir den Check schicken?</h3></div>
+      <div class="felder">
+        <div class="feld breit">
+          <label for="f-betrieb">Betrieb <span class="pflicht">*</span></label>
+          <input id="f-betrieb" type="text" autocomplete="organization" placeholder="Firmenname">
+        </div>
+        <div class="feld">
+          <label for="f-ort">Ort <span class="pflicht">*</span></label>
+          <input id="f-ort" type="text" autocomplete="address-level2" placeholder="PLZ und Ort">
+        </div>
+        <div class="feld">
+          <label for="f-web">Website oder Profil-Link <span class="pflicht">*</span></label>
+          <input id="f-web" type="text" inputmode="url" placeholder="www.ihr-betrieb.de oder Instagram">
+        </div>
+        <div class="feld">
+          <label for="f-name">Ansprechpartner <span class="pflicht">*</span></label>
+          <input id="f-name" type="text" autocomplete="name" placeholder="Vor- und Nachname">
+        </div>
+        <div class="feld">
+          <label for="f-mail">E-Mail <span class="pflicht">*</span></label>
+          <input id="f-mail" type="email" autocomplete="email" placeholder="name@betrieb.de">
+        </div>
+        <div class="feld">
+          <label for="f-tel">Telefon</label>
+          <input id="f-tel" type="tel" autocomplete="tel" placeholder="optional">
+        </div>
+        <div class="feld">
+          <label for="f-rueckruf">Wann erreichen wir Sie am besten?</label>
+          <input id="f-rueckruf" type="text" placeholder="optional, z. B. vormittags">
+        </div>
+        <div class="feld breit">
+          <label for="f-text">Was möchten Sie in den nächsten sechs Monaten verbessern?</label>
+          <textarea id="f-text" placeholder="Ein oder zwei Sätze reichen. Je konkreter, desto genauer der Check."></textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="abschluss">
+      <h3>Ihre Anfrage</h3>
+      <div id="zusammenfassung">Noch nichts ausgewählt.</div>
+      <div class="knoepfe" style="margin-top:0">
+        <button class="btn btn-signal" id="btn-mail">E-Mail öffnen</button>
+        <button class="btn btn-linie" id="btn-kopie">Text kopieren</button>
+      </div>
+      <p class="microcopy">Unverbindlich. Keine Vertragsbindung, kein Rückruf-Dauerfeuer.</p>
+      <div id="meldung" role="status" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section class="faq">
+    <div class="abschnitt-kopf"><h2>Häufige Fragen</h2></div>
+
+    <details>
+      <summary>Für welche Betriebe arbeiten Sie?</summary>
+      <p>Ausschließlich für die Caravan-, Camping- und Reisemobilbranche. Der Schwerpunkt
+         liegt auf Produkten und Marken: Zubehör, Ausbauteile, Hersteller, Ausbauer und
+         Onlineshops. Dazu Händler, Vermieter, Werkstätten, Campingplätze und Stellplätze.</p>
+    </details>
+    <details>
+      <summary>Muss ich gleich alles buchen?</summary>
+      <p>Nein. Wir starten mit Ihrer Ausgangslage und priorisieren. Das kann eine einzelne
+         Kampagne sein, eine überarbeitete Website oder eine laufende Betreuung.</p>
+    </details>
+    <details>
+      <summary>Wie schnell sieht man etwas?</summary>
+      <p>Das hängt von Kanal, Ausgangslage, Wettbewerb und Saison ab. Anzeigen liefern meist
+         innerhalb weniger Wochen erste verwertbare Daten. Organische Sichtbarkeit braucht in
+         der Regel mehrere Monate. Vor dem Start legen wir realistische Zwischenziele fest.</p>
+    </details>
+    <details>
+      <summary>Woran wird der Erfolg gemessen?</summary>
+      <p>Nicht an Reichweite. Bei Produkten und Marken an Bestellungen, Warenkorbgröße,
+         Wiederkäufern, Musteranfragen und neuen Händlerkontakten. Bei Fahrzeugen an
+         Probefahrt- und Beratungsterminen, bei Betrieben an Serviceanfragen, Anrufen und
+         Buchungen. Und immer an den Kosten pro Ergebnis.</p>
+    </details>
+    <details>
+      <summary>Kann meine bestehende Website weiterverwendet werden?</summary>
+      <p>Oft ja. Wir prüfen zuerst, ob gezielte Verbesserungen an Produktseiten, Bildern und
+         Bestellwegen reichen, bevor wir über einen Neubau reden. Ein Relaunch ist teuer und
+         selten die Ursache des Problems.</p>
+    </details>
+    <details>
+      <summary>Arbeiten Sie saisonal?</summary>
+      <p>Ja, anders geht es in dieser Branche nicht. Kaufentscheidungen fallen Monate vor der
+         Reise, Händler ordern nach den Herbstmessen, Neuheiten werden im Winter vorbereitet.
+         Danach richten sich Inhalte und Budgets, nicht nach dem Kalendermonat.</p>
+    </details>
+    <details>
+      <summary>Was kostet die Zusammenarbeit?</summary>
+      <p>Das hängt von Ziel, Umfang und Betreuungsintensität ab. Nach dem Check bekommen Sie
+         ein Angebot mit Leistungen, Mengen, Taktung und Zuständigkeiten — und mit der
+         ausdrücklichen Angabe, was nicht enthalten ist.</p>
+    </details>
+    <details>
+      <summary>Wie hoch muss das Werbebudget mindestens sein?</summary>
+      <p>Wir starten Kampagnen ab 1.000 € Werbebudget im Monat, je nach Betriebsgröße und
+         Wettbewerb auch darüber. Der Grund ist nicht Bequemlichkeit: Unter dieser Grenze
+         sammeln Google und Meta zu wenige Daten, um sinnvoll zu optimieren — die Kampagne
+         läuft, kostet Geld und lernt nie dazu. Für kleinere Betriebe ist das Geld in den
+         ersten Monaten meist besser in lokaler Sichtbarkeit und der eigenen Website
+         angelegt. Das sagen wir Ihnen im Check auch dann, wenn es für uns den kleineren
+         Auftrag bedeutet.</p>
+    </details>
+    <details>
+      <summary>Wer bezahlt das Werbebudget?</summary>
+      <p>Sie, direkt an Google oder Meta. Die Werbekonten laufen auf Ihren Namen, mit Ihrer
+         Zahlungsmethode — wir bekommen Zugriff als Verwalter. So sehen Sie jederzeit selbst,
+         was ausgegeben wurde, und behalten die Konten samt Verlaufsdaten, falls wir irgendwann
+         nicht mehr zusammenarbeiten. Unser Honorar rechnen wir getrennt davon ab und niemals
+         als Prozentsatz vom Werbebudget: sonst hätten wir einen Anreiz, Ihr Budget zu erhöhen
+         statt es besser einzusetzen.</p>
+    </details>
+    <details>
+      <summary>Wem gehören Konten, Texte und Bilder?</summary>
+      <p>Ihnen. Google-Konten, Werbekonten, Website, Texte und Bildmaterial laufen auf Ihren
+         Namen und bleiben bei Ihnen, auch wenn die Zusammenarbeit endet.</p>
+    </details>
+  </section>
+
+  </main>
+
+  <footer class="fuss">
+    <span>Die Caravan Marketing Profis</span>
+    <a href="impressum.html">Impressum</a>
+    <a href="datenschutz.html">Datenschutz</a>
+  </footer>
+
+</div>
+
+</body>
 </html>
